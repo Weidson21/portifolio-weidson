@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", "Poppins", sans-serif;
+}
+
+/* Definindo variáveis*/
+
+:root{
+    --bg-primary: #0b0f1a;
+    --bg-secondary: #111827;
+    --primary: #7c3aed;
+    --primary-dark: #6d28d9;
+    --seconday: #4f46e5;
+    --gradient: linear-gradient(135deg, #7c3aed, #4f46e5);
+    --text-primary: #ffffff;
+    --text-secondary: #9ca3af;
+    --card-bg: #111827;
+    --border: rgba(255, 255, 255, 0.05);
+    --shadow: 0 10px 30px rgba(124, 58, 237, 0.2); 
+}
+
+body , html{
+    background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+}
+
+/*Configuração de css para primeira section no header*/
+.container-header-do-topo{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 15px;
+}
+
+.container-header-do-topo h2{
+    color: var(--text-primary);
+}
+
+.letras-roxo{
+    color: var(--primary-dark);
+}
+
+.container-header-do-topo button{
+    background-color: rgba(128, 128, 128, 0.075);
+    padding: 7px;
+    border-radius: 50%;
+    border: none;
+}
+.container-header-do-topo div{
+    background-color: var(--text-primary);
+    width: 17px;
+    height: 2.1px;
+    margin: 4px;
+}
+.container-header-do-topo nav{
+    display: none;
+}
