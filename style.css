@@ -33,7 +33,7 @@ body , html{
     padding: 13px 15px;
 }
 
-.container-header-do-topo h2{
+.container-header-do-topo h1{
     color: var(--text-primary);
 }
 
@@ -76,15 +76,21 @@ body , html{
     font-size: 1rem;
 }
 
+.container-header-introducao > h1 > span:nth-child(5){
+    position: relative;
+    top: -12px;
+}
+
 .container-header-introducao .div{
     width: 100%;
     height: auto;
 }
 .container-header-introducao .primeira-imagem-header{
-    width: 140px;
+    width: 130px;
     height: 148px;
+    margin: 1px;
     border-radius: 50%;
-    border: 1px double var(--primary);
+    box-shadow: var(--shadow);
 }
 
 .container-header-introducao p{
@@ -93,27 +99,28 @@ body , html{
     font-size: 0.87rem;
 }
 
+
 .container-header-introducao button:nth-child(1){
+    background: url(imagens/seta.png) no-repeat right / 30px;
     background-color: var(--primary);
+    color: var(--text-primary);
     width: 210px;
-    padding: 10px;
+    padding: 10px 20px 10px 0px;
     border-radius: 10px;
     border: none;
 }
 
 .container-header-introducao button:nth-child(2){
+    background: url(imagens/mensagens.png) no-repeat right;
     background-color: var(--bg-secondary);
+    color: var(--text-primary);
     width: 210px;
-    padding: 10px;
+    padding: 10px 20px 10px 0px;
     margin: 10px 0 15px 0;
     border-radius: 10px;
     border: 0.5px solid var(--text-secondary);
 }
 
-.container-header-introducao a{
-    text-decoration: none;
-    color: var(--text-primary);
-}
 
 .container-header-introducao .redes-sociais{
     display: grid;
@@ -130,4 +137,17 @@ body , html{
 
 .container-header-introducao .redes-sociais div {
     display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.container-header-introducao .redes-sociais div img{
+    width: 25px;
+    height: 25px;
+}
+
+.container-header-introducao .redes-sociais div img:nth-child(3){
+    width: 45px;
+    height: 45px;
 }
