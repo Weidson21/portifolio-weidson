@@ -35,6 +35,8 @@ body , html{
 
 .container-header-do-topo h1{
     color: var(--text-primary);
+    font-size: 1.3rem;
+    padding: 5px;
 }
 
 .letras-roxo{
