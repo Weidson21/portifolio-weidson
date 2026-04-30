@@ -1,89 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio Weidson</title>
+    <title>Weidson Silva | Desenvolvedor Front-End</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <section class="navagation-section">
-            <h1>Weidson</h1>
 
-            <div class="navagation-bar">
-                <a href="#">Sobre</a>
-                <a href="#">Skills</a>
-                <a href="#">Projetos</a>
-                <a href="#">Contato</a>    
-            </div>
+<body>
+    <!--Estruturação do cabeçalho-->
+    <header>
+        <section class="container-header-do-topo">
+            <h2>Weidson <span class="letras-roxo">Silva</span></h2>
+
+            <button type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
         </section>
-        <section class="sobre-mim">
-            <img src="imagens/IMG_20260105_050154_207.webp" alt="Imagem do desenvolvedor." class="foto-desenvolvedor">
-            <h2>OLÁ, EU SOU</h2>
-            <h1>Weidson de Oliveira</h1>
-            <p>Futuro Desenvolvedor Front-End (em evolução)</p>
+
+        <section class="container-header-introducao">
+            <h1>
+                <span class="intro">Olá, eu sou</span><br>
+                Weidson <span class="letras-roxo">Silva</span><br>
+                <span>Desenvolvedor <span class="letras-roxo">Front-End</span></span>
+            </h1>
+
+            <div class="botoes">
+                <button type="button">Ver Meus projetos</button>
+                <button type="button">Entrar em contato</button>
+            </div>
+
+            <div class="redes-sociais">
+                <h2>Redes sociais</h2>
+                <img src="#" alt="Logo do github.">
+                <img src="#" alt="Logo do linkedln">
+                <img src="#" alt="Logo do instagram">
+                <img src="#" alt="Logo do X">
+            </div>
+
+            <img src="#" alt="Imagem do desenvolvedor">
         </section>
     </header>
 
+    <!--Estruturação do conteúdo principal-->
     <main>
-        <section class="container1">
-            <h2>Sobre mim</h2>
-            <p>Sou apaixonado por tecnologia e por criar soluções que ajudam a transformar ideias em experiências na web. Estou em constante aprendizado para me tornar um desenvolvedor cada vez melhor.</p>
-            <img src="imagens/desenvolver.png" alt="Imagem de ambiente de desenvolvimento." class="notebook">
+        <section class="container-main-sobre-mim">
+            <article>
+                <h2>SOBRE MIM</h2>
+                <p>Sou um desenvolvedor Web e apaixonado por tecnologia. Gosto de criar soluções simples, bonitas e que
+                    realmente funcionam. Estou sempre aprendendo e desenvolvendo algo novo.</p>
+            </article>
         </section>
 
-        <section class="container2">
-            <h2>Skills</h2>
-            <div><img src="imagens/html logo.png" alt="Símbolo do HTML5" class="logo-tecnologia">
-            <p>HTML</p></div>
-            <div><img src="imagens/css-logo.png" alt="Símbolo do CSS3" class="logo-tecnologia">
-            <p>CSS</p></div>
-            <div><img src="imagens/js logo.png" alt="Símbolo do JavaScript" class="logo-tecnologia">
-            <p>JavaScript</p></div>
+        <section>
+            <article>
+                <h2 class="letras-roxo"><span></span> <span class="letra-menor">SKILLS</span> <br>
+                    Minhas Habilidades</h2>
+                <div id="logo-das-skills">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </article>
         </section>
 
-        <section class="container3">
-            <h2>Projetos</h2>
-            <div class="projetos">
-                <img src="imagens/imagem.jpg" alt="1º projeto." class="logo-imagem">
-                <h3>Projeto 1</h3>
-                <p>Descriação breve do projeto que você faz.</p>
-            </div>
-            <div class="projetos">
-                <img src="imagens/imagem.jpg" alt="2º projeto." class="logo-imagem">
-                <h3>Projeto 2</h3>
-                <p>Descriação breve do projeto que você faz.</p>
-            </div>
-            <div class="projetos">
-                <img src="imagens/imagem.jpg" alt="3º projeto." class="logo-imagem">
-                <h3>Projeto 3</h3>
-                <p>Descriação breve do projeto que você faz.</p>
-            </div>
+        <section class="container-main-projetos">
+            <h2 class="letras-roxo"><span></span> Projetos<br>
+            <span class="letras-brancas">Meus</span> projetos</h2>
+            <article class="project-card">
+                <img src="#" alt="Imagem do projeto">
+
+                <div class="project-info">
+                    <h3>Portfólio Pessoal</h3>
+                    <p>Meu portfólio pessoal com tema escuro</p>
+
+                    <div class="techs">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="progressao-de-projetos">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </article>
+        </section>
+
+        <section class="container-sugestao-contato">
+            <article class="sugestao-contato">
+                <h3 class="letras-roxo"><span></span> CONTANTO<br>
+                <span class="letras-brancas"></span> Conversar?</h3>
+                <p>Estou sempre aberto para novos projetos e oportunidades. Entre em contato comigo!
+                </p>
+                <button type="button"><a href="#">weidsoniarley86@gmail.com</a></button>
+            </article>
+        </section>
+
+        <section>
+            <article class="navegation-bar">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </article>
         </section>
     </main>
-
-    <footer>
-        <section class="container4">
-            <h2>Contato</h2>
-            <div class="global">
-                <div class="redes">
-                    <img 
-                    src="imagens/logo-github.png" alt="github do desenvolvedor." class="logo-contatos">
-                    <h3>GitHub</h3>
-                    <a href="#">🔗github.com/Weidson21</a>
-                </div>
-                <div class="redes">
-                    <img src="imagens/imagem pgn email.png" alt="E-mail do desenvolvedor." class="logo-contatos">
-                    <h3>Email</h3>
-                    <a href="#">🔗weidson@gmai.com</a>
-                </div>
-            </div>
-        </section>
-        <section class="container5">
-            <p>© 2026 Weidson. Todos os direitos reservados.</p>
-            <span>💙</span>
-        </section>
-    </footer>
 </body>
+
 </html>
