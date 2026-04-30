@@ -47,6 +47,7 @@ body , html{
     border-radius: 50%;
     border: none;
 }
+
 .container-header-do-topo div{
     background-color: var(--text-primary);
     width: 17px;
@@ -55,4 +56,78 @@ body , html{
 }
 .container-header-do-topo nav{
     display: none;
+}
+
+/*Configuração de css para a segunda section do header*/
+
+.container-header-introducao{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.container-header-introducao h1 {
+    color: var(--text-primary);
+}
+
+.container-header-introducao > h1 > span:nth-child(1), .container-header-introducao > h1 > span:nth-child(5){
+    font-size: 1rem;
+}
+
+.container-header-introducao .div{
+    width: 100%;
+    height: auto;
+}
+.container-header-introducao .primeira-imagem-header{
+    width: 140px;
+    height: 148px;
+    border-radius: 50%;
+    border: 1px double var(--primary);
+}
+
+.container-header-introducao p{
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    font-size: 0.87rem;
+}
+
+.container-header-introducao button:nth-child(1){
+    background-color: var(--primary);
+    width: 210px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.container-header-introducao button:nth-child(2){
+    background-color: var(--bg-secondary);
+    width: 210px;
+    padding: 10px;
+    margin: 10px 0 15px 0;
+    border-radius: 10px;
+    border: 0.5px solid var(--text-secondary);
+}
+
+.container-header-introducao a{
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.container-header-introducao .redes-sociais{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.container-header-introducao .redes-sociais h2{
+    grid-column: 1/-1;
+    justify-self: start;
+    color: var(--text-secondary);
+    font-size: 0.87rem;
+}
+
+.container-header-introducao .redes-sociais div {
+    display: flex;
 }
