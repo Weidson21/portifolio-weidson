@@ -21,10 +21,14 @@
     --shadow: 0 10px 30px rgba(124, 58, 237, 0.2); 
 }
 
-/* CORREÇÃO NO BODY: Centraliza o conteúdo quando tira o zoom */
+/*Configuração do css do body*/
 body , html{
     background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+    width: 100%;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center; /* Isso centraliza as sections horizontalmente */
@@ -39,6 +43,7 @@ header, main {
     align-items: center;
 }
 
+/*Configuração do css da primeira section do header(topo)*/
 .container-header-do-topo{
     display: flex;
     justify-content: space-between;
@@ -74,6 +79,8 @@ header, main {
     display: none;
 }
 
+
+/*Configuração do css da segunda section do header(introdução)*/
 .container-header-introducao{
     display: grid;
     grid-template-columns: 1fr;
@@ -187,6 +194,7 @@ header, main {
     height: 45px;
 }
 
+/*Configuração da primeira section do main(sobre mim)*/
 .container-main-sobre-mim{
     display: flex;
     flex-direction: column;
@@ -228,6 +236,7 @@ header, main {
     margin-left: 25px;
 }
 
+/*Configuração do css para a segunda section do main(skills)*/
 .container-main-skills{
     display: flex;
     flex-direction: column;
@@ -277,11 +286,11 @@ header, main {
     height: 40px;
 }
 
-/* SEÇÃO DE PROJETOS - REAJUSTADA */
+/*Configuração do css para a terceira section do main (projetos) */
 .container-main-projetos{
     display: grid;
     grid-template-columns: 1fr 0.fr; /* Dividi igual para facilitar o alinhamento */
-    width: 90%;
+    width: 93%;
     margin: 30px auto 0 auto;
     padding-top: 20px;
 }
@@ -290,7 +299,6 @@ header, main {
     grid-column: 2/3;
     grid-row: 1/ -1;
     justify-self: end;
-    margin-right: 10px;
     text-decoration: none;
     color: var(--primary); /* Mantive a cor do seu tema */
 }
@@ -298,6 +306,7 @@ header, main {
 .container-main-projetos > span:nth-child(1){
     grid-column: 1 / -1; /* Força o span a ficar no topo */
     margin-left: 30px;
+    padding-bottom: 2px;
     font-size: 1rem;
     font-weight: bold;
 }
@@ -316,13 +325,14 @@ header, main {
 .project-info{
     grid-column: 1 / -1; /* AGORA ELE OCUPA TUDO */
     display: grid;
-    grid-template-columns: 1fr 0.7fr ;
+    grid-template-columns: 1fr;
     height: auto;
     background-color: var(--card-bg);
     padding: 15px;
     border-radius: 10px;
-    width: 100%;
+    width: 95%;
     margin-bottom: 20px;
+    margin: auto;
 }
 
 .project-info h3{
@@ -342,10 +352,15 @@ header, main {
     color: var(--text-primary);
 }
 
+
 .techs{
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     justify-content: start;
     padding-bottom: 10px;
+}
+
+.techs span:nth-child(4){
+    margin-left: 40px;
 }
