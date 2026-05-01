@@ -287,6 +287,10 @@ header, main {
 }
 
 /*Configuração do css para a terceira section do main (projetos) */
+.tamanho-main-projetos{
+        width: 95%;
+    }
+
 .container-main-projetos{
     display: grid;
     grid-template-columns: 1fr 0.fr; /* Dividi igual para facilitar o alinhamento */
@@ -372,7 +376,7 @@ header, main {
     height: auto;
     background-color: var(--card-bg);
     border-radius: 10px;
-    margin-top: 50px;
+    margin: 50px 0;
     padding: 10px;
 }
 
@@ -380,6 +384,7 @@ header, main {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-bottom: 10px;
 }
 
 .sugestao-contato .texto-contato-cinza{
@@ -403,4 +408,16 @@ header, main {
 .sugestao-contato a{
     color: var(--text-primary);
     text-decoration: none;
+}
+
+/*Pequeno ajuste em telas mobile 412px*/
+
+@media (min-width: 412px){
+    .project-info img{
+        width: 100%;
+    }
+
+    .techs span:nth-child(4){
+        margin-left: 100px;
+    }
 }
