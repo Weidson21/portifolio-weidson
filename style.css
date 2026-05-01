@@ -364,3 +364,42 @@ header, main {
 .techs span:nth-child(4){
     margin-left: 40px;
 }
+
+/*Configuração do css para a quarta section do main (contato)*/
+
+.container-sugestao-contato{
+    width: 90%;
+    height: auto;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.sugestao-contato{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sugestao-contato .texto-contato-cinza{
+    color: var(--text-secondary);
+}
+
+.alinhamento-link-contato{
+    display: flex;
+    gap: 15px;
+    background: url(imagens/avancar.png) no-repeat right 12px center;
+    background-color: rgba(128, 128, 128, 0.075);
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.alinhamento-link-contato:hover{
+    background-color: var(--text-secondary);
+}
+.sugestao-contato a{
+    color: var(--text-primary);
+    text-decoration: none;
+}
