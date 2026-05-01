@@ -101,33 +101,50 @@ body , html{
     font-size: 0.87rem;
 }
 
-
-.container-header-introducao button:nth-child(1){
+.botoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+.container-header-introducao a:nth-child(1){
     background: url(imagens/seta.png) no-repeat right / 30px;
     background-color: var(--primary);
     color: var(--text-primary);
     width: 210px;
-    padding: 10px 20px 10px 0px;
+    padding: 10px 40px;
     border-radius: 10px;
     border: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.container-header-introducao button:nth-child(2){
+.container-header-introducao a:nth-child(2){
     background: url(imagens/mensagens.png) no-repeat right;
     background-color: var(--bg-secondary);
     color: var(--text-primary);
     width: 210px;
-    padding: 10px 20px 10px 0px;
+    padding: 10px 40px;
     margin: 10px 0 15px 0;
     border-radius: 10px;
     border: 0.5px solid var(--text-secondary);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container-header-introducao a:nth-child(1):hover{
+    background-color: var(--bg-secondary);
+}
+
+.container-header-introducao a:nth-child(2):hover{
+    background-color: var(--primary);
 }
 
 
 .container-header-introducao .redes-sociais{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
 }
 
 .container-header-introducao .redes-sociais h2{
@@ -135,11 +152,12 @@ body , html{
     justify-self: start;
     color: var(--text-secondary);
     font-size: 0.87rem;
+    font-weight: bold;
 }
 
 .container-header-introducao .redes-sociais div {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
     margin-bottom: 10px;
 }
@@ -153,3 +171,44 @@ body , html{
     width: 45px;
     height: 45px;
 }
+/*Configuração de css para a primeira section do man*/
+.container-main-sobre-mim{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 86%;
+    height: auto;
+    background-color: var(--card-bg);
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.container-main-sobre-mim h2{
+    background: url(imagens/pessoa\ \(1\).png) no-repeat left / 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0 0 0 25px;
+}
+
+.container-main-sobre-mim p{
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 5px;
+}
+
+.container-main-sobre-mim div{
+    display: flex;
+    justify-content: center;
+}
+
+.container-main-sobre-mim div p{
+    background: url(imagens/pin\ \(1\).png) no-repeat left / 30px;
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0 40px;
+    margin-left: 25px;
+}
+
