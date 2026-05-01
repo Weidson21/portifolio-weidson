@@ -4,9 +4,8 @@
     padding: 0;
     margin: 0;
     font-family: "Inter", "Poppins", sans-serif;
+    box-sizing: border-box;
 }
-
-/* Definindo variáveis*/
 
 :root{
     --bg-primary: #0b0f1a;
@@ -22,21 +21,36 @@
     --shadow: 0 10px 30px rgba(124, 58, 237, 0.2); 
 }
 
+/* CORREÇÃO NO BODY: Centraliza o conteúdo quando tira o zoom */
 body , html{
     background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Isso centraliza as sections horizontalmente */
 }
 
-/*Configuração de css para primeira section no header*/
+/* AJUSTE NOS CONTAINERS: Garante que eles não fiquem colados na esquerda em telas grandes */
+header, main {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .container-header-do-topo{
     display: flex;
     justify-content: space-between;
-    padding: 13px 15px;
+    padding: 13px;
+    width: 100%; /* Ocupa a largura do header */
 }
 
 .container-header-do-topo h1{
     color: var(--text-primary);
     font-size: 1.3rem;
     padding: 5px;
+    text-align: center;
 }
 
 .letras-roxo{
@@ -60,14 +74,13 @@ body , html{
     display: none;
 }
 
-/*Configuração de css para a segunda section do header*/
-
 .container-header-introducao{
     display: grid;
     grid-template-columns: 1fr;
     gap: 8px;
     padding: 0 10px;
     text-align: center;
+    justify-items: center; /* Centraliza o conteúdo do grid */
 }
 
 .container-header-introducao h1 {
@@ -108,10 +121,11 @@ body , html{
     gap: 3px;
 }
 .container-header-introducao a:nth-child(1){
-    background: url(imagens/seta.png) no-repeat right / 30px;
+    background: url(imagens/seta.png) no-repeat right  15px center / 25px; 
     background-color: var(--primary);
     color: var(--text-primary);
-    width: 210px;
+    text-align: center;
+    width: 240px;
     padding: 10px 40px;
     border-radius: 10px;
     border: none;
@@ -120,10 +134,11 @@ body , html{
 }
 
 .container-header-introducao a:nth-child(2){
-    background: url(imagens/mensagens.png) no-repeat right;
+    background: url(imagens/mensagens.png) no-repeat right 15px center / 25px;
     background-color: var(--bg-secondary);
     color: var(--text-primary);
-    width: 210px;
+    text-align: center;
+    width: 240px;
     padding: 10px 40px;
     margin: 10px 0 15px 0;
     border-radius: 10px;
@@ -171,15 +186,15 @@ body , html{
     width: 45px;
     height: 45px;
 }
-/*Configuração de css para a primeira section do man*/
+
 .container-main-sobre-mim{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 86%;
+    width: 90%;
     height: auto;
     background-color: var(--card-bg);
-    margin: auto;
+    margin: 20px auto; /* Centralizado com margin auto */
     padding: 15px;
     border-radius: 10px;
 }
@@ -189,6 +204,7 @@ body , html{
     font-size: 1rem;
     font-weight: bold;
     padding: 0 0 0 25px;
+    color: var(--text-primary);
 }
 
 .container-main-sobre-mim p{
@@ -212,3 +228,123 @@ body , html{
     margin-left: 25px;
 }
 
+.container-main-skills{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%; /* Ajustado para bater com o sobre-mim */
+    height: auto;
+    margin: 10px auto;
+}
+
+#letra-menor{
+    position: relative;
+    top: 18px;
+    left: 35px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.container-main-skills h2{
+    color: var(--text-primary);
+    margin-left: 15px;
+}
+
+.container-main-skills .logo-das-skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: auto;
+}
+
+.container-main-skills .logo-das-skills div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  flex: 1 1 120px;
+  max-width: 150px;
+  height: 110px;
+  padding: 20px;
+}
+
+.logo-das-skills div img{
+    width: 40px;
+    height: 40px;
+}
+
+/* SEÇÃO DE PROJETOS - REAJUSTADA */
+.container-main-projetos{
+    display: grid;
+    grid-template-columns: 1fr 0.fr; /* Dividi igual para facilitar o alinhamento */
+    width: 90%;
+    margin: 35px auto 0 auto;
+}
+
+#ver-todos{
+    grid-column: 2/3;
+    grid-row: 1/ -1;
+    justify-self: end;
+    margin-right: 10px;
+    text-decoration: none;
+    color: var(--primary); /* Mantive a cor do seu tema */
+}
+
+.container-main-projetos > span:nth-child(1){
+    grid-column: 1 / -1; /* Força o span a ficar no topo */
+    margin-left: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.container-main-projetos h2{
+    grid-column: 1 / -1; /* Força o título a ficar no topo */
+    margin-left: 13px;
+    margin-bottom: 20px;
+}
+
+.letras-brancas{
+    color: var(--text-primary);
+}
+
+/* O CARD QUE VOCÊ QUERIA QUE OCUPASSE AS DUAS COLUNAS */
+.project-info{
+    grid-column: 1 / -1; /* AGORA ELE OCUPA TUDO */
+    display: grid;
+    grid-template-columns: 1fr 0.7fr ;
+    height: auto;
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.project-info h3{
+    color: var(--text-primary);
+    padding: 10px 0;
+}
+
+.project-info p{
+    color: var(--text-secondary);
+    padding-bottom: 10px;
+}
+
+.project-info span{
+    background-color: rgba(128, 128, 128, 0.034);
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--text-primary);
+}
+
+.techs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: start;
+    padding-bottom: 10px;
+}
