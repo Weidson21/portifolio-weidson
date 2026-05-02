@@ -167,6 +167,7 @@ header, main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
+    margin-left: 10px;
 }
 
 .container-header-introducao .redes-sociais h2{
@@ -246,10 +247,20 @@ header, main {
     margin: 10px auto;
 }
 
+.ponto{
+    display: inline-block;
+    background-color: var(--primary-dark);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: relative;
+    left: -4px;
+}
+
 #letra-menor{
     position: relative;
-    top: 18px;
-    left: 35px;
+    top: 16px;
+    left: 23px;
     font-size: 1rem;
     font-weight: bold;
 }
@@ -305,11 +316,21 @@ header, main {
     justify-self: end;
     text-decoration: none;
     color: var(--primary); /* Mantive a cor do seu tema */
+    -webkit-tap-highlight-color: transparent;
+}
+
+#ver-todos:hover{
+    text-decoration: underline;
+}
+
+#ver-todos:visited{
+    color: #5c21bb;
 }
 
 .container-main-projetos > span:nth-child(1){
     grid-column: 1 / -1; /* Força o span a ficar no topo */
-    margin-left: 30px;
+    position: relative;
+    left: 18px;
     padding-bottom: 2px;
     font-size: 1rem;
     font-weight: bold;
@@ -317,7 +338,7 @@ header, main {
 
 .container-main-projetos h2{
     grid-column: 1 / -1; /* Força o título a ficar no topo */
-    margin-left: 13px;
+    margin-left: 10px;
     margin-bottom: 20px;
 }
 
