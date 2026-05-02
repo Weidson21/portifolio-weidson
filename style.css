@@ -215,6 +215,7 @@ li a{
 .container-header-introducao .redes-sociais{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    width: 98%;
     gap: 8px;
     margin-left: 10px;
 }
@@ -398,14 +399,15 @@ li a{
 /* O CARD QUE VOCÊ QUERIA QUE OCUPASSE AS DUAS COLUNAS */
 .project-info{
     grid-column: 1 / -1; /* AGORA ELE OCUPA TUDO */
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     height: auto;
     background-color: var(--card-bg);
     padding: 15px;
     border-radius: 10px;
     width: 95%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin: auto;
 }
 
@@ -419,6 +421,10 @@ li a{
     padding-bottom: 10px;
 }
 
+.project-info > img{
+    width: 100%;
+}
+
 .project-info span{
     background-color: rgba(128, 128, 128, 0.034);
     padding: 5px;
@@ -426,17 +432,17 @@ li a{
     color: var(--text-primary);
 }
 
-
 .techs{
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     gap: 8px;
     justify-content: start;
-    padding-bottom: 10px;
 }
 
-.techs span:nth-child(4){
-    margin-left: 40px;
+.link-projeto{
+    position: relative;
+    top: -24px;
+    justify-content: start;
 }
 
 /*Configuração do css para a quarta section do main (contato)*/
@@ -475,6 +481,7 @@ li a{
     margin-top: 15px;
     padding: 10px;
     border-radius: 10px;
+    margin: auto;
 }
 
 .alinhamento-link-contato:hover{
@@ -489,11 +496,88 @@ li a{
 /*Pequeno ajuste em telas mobile 412px*/
 
 @media (min-width: 412px){
-    .project-info img{
-        width: 100%;
+    .project-info{
+        align-items: start;
     }
 
-    .techs span:nth-child(4){
-        margin-left: 100px;
+    .link-projeto{
+        align-self: end;
     }
+}
+
+@media (min-width: 768px){
+    /*Configuração do header para tablets*/
+    .container-header-introducao p{
+        padding: 20px 140px 0;
+    }
+
+    .botoes{
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .botoes a:nth-child(2){
+        margin-top: 15px;
+    }
+
+    /*Configuração do css container skills para tablet*/
+    .container-main-skills{
+        width: 90vw;
+        align-items: center;
+    }
+
+    .ponto, #letra-menor, .container-main-skills > h2{
+        align-self: start;
+    }
+
+    /*Configuração do css container projetos para tablet*/
+    .project-info{
+        grid-column: 1 / -1; /* AGORA ELE OCUPA TUDO */
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.1fr;
+    justify-items: start;
+    height: auto;
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 10px;
+    width: 95%;
+    margin-bottom: 20px;
+    margin: auto;
+    }
+    .techs{
+        margin-top: 10px;
+        gap: 10px;
+    }
+    .link-projeto{
+        position: static;
+        align-self: start;
+    }
+
+    .project-info h3, p, .techs{
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 1024px){
+    .container-header-do-topo button{
+        display: none;
+    }
+
+    .container-header-do-topo nav{
+        display: flex;
+        position: static;
+        transform: translateX(0);
+        background-color: transparent;
+        margin-right: 550px;
+    }
+
+    .container-header-do-topo ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container-header-introducao p{
+        padding: 15px 300px;
+    }
+
 }
