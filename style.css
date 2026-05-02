@@ -67,7 +67,8 @@ header, main {
     padding: 7px;
     border-radius: 50%;
     border: none;
-    position: fixed;
+    position: relative;
+    top: 4px;
     right: 20px;
     z-index: 1000;
     transition: transform 0.3s ease-in-out;
@@ -82,7 +83,7 @@ header, main {
 }
 
 .container-header-do-topo button.active {
-    transform: translateX(-125px);
+    transform: translateX(-115px);
 }
 
 .container-header-do-topo div{
