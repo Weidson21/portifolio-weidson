@@ -556,6 +556,18 @@ li a{
     .project-info h3, p, .techs{
         margin-left: 20px;
     }
+
+    .project-info{
+        width: 90%;
+    }
+    .project-info > img{
+        height: 240px;
+    }
+
+    .container-sugestao-contato{
+        width: 85%;
+    }
+
 }
 
 @media (min-width: 1024px){
@@ -622,6 +634,21 @@ li a{
 
     .botoes{
         justify-self: center;
+    }
+
+    .container-main-sobre-mim{
+        width: 75%;
+    }
+
+    .project-info{
+        width: 80%;
+    }
+    .project-info > img{
+        height: 240px;
+    }
+
+    .container-sugestao-contato{
+        width: 76%;
     }
 }
 
