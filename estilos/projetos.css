@@ -9,7 +9,7 @@ main{
     align-self: flex-start;
 }
 
-a{
+.voltar a{
     -webkit-tap-highlight-color: transparent;
 }
 
