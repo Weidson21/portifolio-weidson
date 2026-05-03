@@ -1,0 +1,60 @@
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+}
+
+.voltar{
+    align-self: flex-start;
+}
+
+@media (min-width: 768px){
+    .movimento{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .project-card{
+        display: flex;
+        flex-flow: row wrap;
+        width: 65%;
+    }
+
+    .project-info{
+    grid-column: 1 / -1; /* AGORA ELE OCUPA TUDO */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: auto;
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 10px;
+    width: 90%;
+    margin-bottom: 10px;
+    margin: auto;
+    }
+
+    .techs{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 8px;
+    justify-content: start;
+
+    }
+    .link-projeto{
+    position: relative;
+    top: -24px;
+    align-self: end;
+    }
+}
+
+@media (min-width: 1024px){
+    .movimento{
+        justify-content: start;
+    }
+
+    .project-card{
+        width: 48%;
+    }
+}
