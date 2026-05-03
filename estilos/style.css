@@ -34,6 +34,13 @@ body , html{
     align-items: center; /* Isso centraliza as sections horizontalmente */
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+p{
+    line-height: 1.6rem;
+}
 /* AJUSTE NOS CONTAINERS: Garante que eles não fiquem colados na esquerda em telas grandes */
 header, main {
     width: 100%;
