@@ -1,0 +1,12 @@
+.ultimo-p{
+    color: #ffffff;
+    padding-top: 20px;
+}
+
+@media (min-width:1024px){
+    .ultimo-p{
+    color: #ffffff;
+    padding-top: 20px;
+    margin: 0 250px;
+    }
+}
