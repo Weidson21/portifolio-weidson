@@ -9,6 +9,10 @@ main{
     align-self: flex-start;
 }
 
+a{
+    -webkit-tap-highlight-color: transparent;
+}
+
 @media (min-width: 768px){
     .movimento{
         display: flex;
